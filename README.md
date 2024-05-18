@@ -1,16 +1,16 @@
-# testebloc
+# Estudo Bloc
 
-A new Flutter project.
+Criado aplicação em grupo com turma da Desenvolvimento mobile.
 
-## Getting Started
+Através desse aplicativo estudamos conceito do Bloc.
 
-This project is a starting point for a Flutter application.
+As Telas podem ser melhoradas objetivo foi o estudo do bloc.
 
-A few resources to get you started if this is your first Flutter project:
+Existem duas páginas sendo a HomePage que exibe dados dos usuários. 
+E a página PostPage que exibe os posts.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Para trocar a página de momento mude na Main.dart a página que deseja iniciar.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Em Breve novas melhorias.
+
+Ah você fazer um fork e contribuir com este projeto de estudo.
