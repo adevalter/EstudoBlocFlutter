@@ -8,7 +8,7 @@ class PostApiRepository {
   static Future<List<Post>> getPost() async {
     List<Post> lista = [];
 
-    var url = Uri.https("jsonplaceholder.typicode.com", "post");
+    var url = Uri.https("jsonplaceholder.typicode.com", "/posts");
     final response = await http.get(url);
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);

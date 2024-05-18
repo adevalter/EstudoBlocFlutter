@@ -35,12 +35,7 @@ class _PostPageState extends State<PostPage> {
                     width: 10,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return Row(
-                      children: [
-                        Text(state.post[index].title),
-                        Text(state.post[index].body),
-                      ],
-                    );
+                    return Text(state.post[index].title);
                   },
                 );
                 ;

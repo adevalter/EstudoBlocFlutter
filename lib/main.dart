@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testebloc/bloc/post_bloc.dart';
 import 'package:testebloc/homepage.dart';
+import 'package:testebloc/post_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,10 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => PostBloc()..add(PostEventLoadedUser()),
           child: HomePage(),
+        ),
+        BlocProvider(
+          create: (context) => PostBloc()..add(PostEventLoadedPost()),
+          child: PostPage(),
         )
       ],
       child: MaterialApp(
@@ -27,7 +32,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.deepPurple, background: Colors.blueAccent),
           useMaterial3: true,
         ),
-        home: HomePage(),
+        home: PostPage(),
       ),
     );
   }
