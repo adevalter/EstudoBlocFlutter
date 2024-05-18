@@ -8,7 +8,7 @@ class PostSateLoading extends PostSate {
 }
 
 class PostSateLoaded extends PostSate {
-  final List<Result> result;
+  final List<Post> result;
 
   PostSateLoaded(this.result);
 
