@@ -26,16 +26,16 @@ class _HomePageState extends State<HomePage> {
                 );
               }
 
-              if (state is PostSateLoaded) {
+              if (state is PostSateLoadedUser) {
                 return ListView.separated(
                   scrollDirection: Axis.vertical,
-                  itemCount: state.result.length,
+                  itemCount: state.users.length,
                   separatorBuilder: (BuildContext context, int index) =>
                       const SizedBox(
                     width: 10,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return Text(state.result[index].name);
+                    return Text(state.users[index].name);
                   },
                 );
                 ;

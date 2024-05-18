@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => PostBloc()..add(PostEventLoaded()),
+          create: (context) => PostBloc()..add(PostEventLoadedUser()),
           child: HomePage(),
         )
       ],

@@ -7,13 +7,22 @@ class PostSateLoading extends PostSate {
   List<Object?> get props => [];
 }
 
-class PostSateLoaded extends PostSate {
-  final List<Post> result;
+class PostSateLoadedUser extends PostSate {
+  final List<Users> users;
 
-  PostSateLoaded(this.result);
+  PostSateLoadedUser(this.users);
 
   @override
-  List<Object?> get props => [result];
+  List<Object?> get props => [users];
+}
+
+class PostSateLoadedPost extends PostSate {
+  final List<Post> post;
+
+  PostSateLoadedPost(this.post);
+
+  @override
+  List<Object?> get props => [post];
 }
 
 class PostSateErro extends PostSate {
