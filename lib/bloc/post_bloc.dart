@@ -5,6 +5,7 @@ import 'package:testebloc/entitie/post.dart';
 import 'package:testebloc/entitie/result.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testebloc/repositories/api_respository%20copy.dart';
+import 'package:testebloc/repositories/post_api_respository.dart';
 
 part 'post_event_bloc.dart';
 part 'post_state_bloc.dart';
@@ -28,5 +29,14 @@ class PostBloc extends Bloc<PostEvent, PostSate> {
   }
 
   FutureOr<void> _onFetchAllPost(
-      PostEventLoadedPost event, Emitter<PostSate> emit) {}
+      PostEventLoadedPost event, Emitter<PostSate> emit) async {
+    emit(PostSateLoading());
+    await Future.delayed(Duration(seconds: 3));
+    try {
+      final post = await PostApiRepository.getPost();
+      emit(PostSateLoadedPost(post));
+    } on FormatException catch (e) {
+      emit(PostSateErro("Falha Consulta Lista ${e.message} "));
+    }
+  }
 }
